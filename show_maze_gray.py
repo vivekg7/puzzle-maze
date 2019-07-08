@@ -1,7 +1,4 @@
-if max(m, n) > 40:
-    t = 1
-else:
-t = 2import cv2
+import cv2
 import numpy as np
 import pyautogui as pyg
 
