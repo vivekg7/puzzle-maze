@@ -66,6 +66,7 @@ int main()
         createmaze();
     }
     // print result for now
+    printmaze();
     printf("%d\n%d\n", sy, sx);
     for ( int i=0; i<sy; i++ ) {
         for ( int j=0; j<sx; j++ ) {
@@ -88,6 +89,20 @@ int main()
     }
     free(a);
     return 0;
+}
+
+// print maze to file data.txt
+void printmaze() {
+    FILE *fp;
+    fp = fopen("data.txt", "w");
+    fprintf(fp, "%d\n", sy);
+    fprintf(fp, "%d\n", sx);
+    for ( int i=0; i<sy; i++ ) {
+        for ( int j=0; j<sx; j++ ) {
+            fprintf(fp, "%d ", mat[j][i]);
+        }
+        fprintf(fp, "%s", " \n");
+    }
 }
 
 // start with a very closed plane
