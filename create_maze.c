@@ -39,7 +39,7 @@ int main()
         }
         printf("\nEnter number of columns : \n");
         scanf("%d", &sx);
-        if ( sy < 10 ) {
+        if ( sx < 10 ) {
             printf("Please Enter a Value greater than 10\n");
             printf("Try Again\n");
             continue;
@@ -65,15 +65,8 @@ int main()
     while ( incomplete() ) {
         createmaze();
     }
-    // print result for now
+    // print result to a file
     printmaze();
-    printf("%d\n%d\n", sy, sx);
-    for ( int i=0; i<sy; i++ ) {
-        for ( int j=0; j<sx; j++ ) {
-            printf("%d ", mat[j][i]);
-        }
-        printf("\n");
-    }
     // Free all allocated memory
     for ( int i=0; i<sx; i++ ) {
         free( mat[i] );
