@@ -4,6 +4,7 @@
 int main()
 {
     system("gcc -o maze create_maze.c");
-    system("./maze | python3 show_maze_color.py");
+    system("./maze > data.txt");
+    system("python3 show_maze_color.py < data.txt");
     return 0;
 }
