@@ -4,7 +4,9 @@
 #include <string.h>
 #include <stdbool.h>
 
-int sx = 18, sy = 50; // size of full grid
+// sx = columns && sy = rows
+// please don't put these values less than 10
+int sx, sy; // size of full grid
 
 int **mat; // all corner points
 _Bool **path; // all center points
@@ -28,6 +30,22 @@ void createmaze();
 
 int main()
 {
+    while ( 1 ) {
+        printf("\nEnter number of rows : \n");
+        scanf("%d", &sy);
+        if ( sy < 10 ) {
+            printf("Please Enter a Value greater than 10\n");
+            continue;
+        }
+        printf("\nEnter number of columns : \n");
+        scanf("%d", &sx);
+        if ( sy < 10 ) {
+            printf("Please Enter a Value greater than 10\n");
+            printf("Try Again\n");
+            continue;
+        }
+        break;
+    }
     srand(time(0));
     mat = (int**)malloc( sx * sizeof(int*) );
     for ( int i=0; i<sx; i++ ) {
