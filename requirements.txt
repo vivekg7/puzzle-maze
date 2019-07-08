@@ -3,3 +3,11 @@ Best with Linux
 linux :
    python3 libraries :
       opencv, numpy, pyautogui
+
+window :
+   gcc compiler
+   
+   python3 interpreter
+   
+   python3 libraries :
+      opencv, numpy, pyautogui
