@@ -1,0 +1,5 @@
+Best with Linux
+
+linux :
+   python3 libraries :
+      opencv, numpy, pyautogui
