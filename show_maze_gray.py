@@ -46,6 +46,6 @@ cv2.line(img, (size*m, size), (size*m, size*(n-1)), 0, t)
 cv2.line(img, (size, size*n), (size*m, size*n), 0, t)
 
 # show output image on output screen
-cv2.imshow('image', img)
+cv2.imshow('maze', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
