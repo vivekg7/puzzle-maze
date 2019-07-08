@@ -3,7 +3,7 @@
 
 int main()
 {
-    system("gcc -o maze realmaze.c");
+    system("gcc -o maze create_maze.c");
     system("./maze | python3 show_maze_color.py");
     return 0;
 }
