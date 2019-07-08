@@ -8,6 +8,6 @@ Please read requirements.txt file for prerequisites
 
 enter command :-
   
-  gcc setup.c
+    gcc setup.c
   
-  ./a.out
+    ./a.out
