@@ -11,3 +11,9 @@ enter command :-
     gcc setup.c
   
     ./a.out
+
+# Details
+
+uses a fast c-program for all the computations
+
+uses opencv python library for the display of MAZE
