@@ -1,10 +1,18 @@
 import cv2
 import numpy as np
+import pyautogui as pyg
+
+width, height = pyg.size()
 
 n = int(input())
 m = int(input())
 
-size = 50
+size = min(width // m, (height-)//n)
+
+if max(m, n) > 40:
+    t = 1
+else:
+    t = 2
 
 arr = []
 
