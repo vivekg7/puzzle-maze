@@ -4,6 +4,6 @@
 int main()
 {
     system("gcc -o maze realmaze.c");
-    system("./maze | python3 opencvmaze.py");
+    system("./maze | python3 show_maze_color.py");
     return 0;
 }
