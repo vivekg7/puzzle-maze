@@ -5,7 +5,7 @@
 #include <stdbool.h>
 
 // sx = columns && sy = rows
-// please don't put these values less than 10
+// please don't put these values less than 3
 int sx, sy; // size of full grid
 
 int **mat; // all corner points
@@ -33,14 +33,14 @@ int main()
     while ( 1 ) {
         printf("\nEnter number of rows : \n");
         scanf("%d", &sy);
-        if ( sy < 10 ) {
-            printf("Please Enter a Value greater than 10\n");
+        if ( sy < 3 ) {
+            printf("Please Enter a Value greater than 2\n");
             continue;
         }
         printf("\nEnter number of columns : \n");
         scanf("%d", &sx);
-        if ( sx < 10 ) {
-            printf("Please Enter a Value greater than 10\n");
+        if ( sx < 3 ) {
+            printf("Please Enter a Value greater than 2\n");
             printf("Try Again\n");
             continue;
         }
@@ -110,8 +110,8 @@ void make() {
 
 // true if any pathpoint is false
 _Bool incomplete(){
-    for (int i=0; i<sx-5; i++) {
-        for (int j=0; j<sy-5; j++) {
+    for (int i=0; i<sx-1; i++) {
+        for (int j=0; j<sy-1; j++) {
             if(!path[i][j])
                 return true;
         }
